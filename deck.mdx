@@ -12,11 +12,52 @@ export { default as theme } from './theme'
 
 
 <ImageWithLabel>
-  <img src="./static/at-finish.jpg"/>
+  <img height="600" src="./static/at-finish.jpg"/>
 </ImageWithLabel>
 Author: Artem Ovcharenko
 
 ---
+
+```
+const swag = {
+  makeSwag() {
+   return 'You are SWAG now';
+  },
+  amISwag: true,
+};
+
+typeof swag.makeSwag; // function;
+swag.makeSwag(); // 'You are SWAG now';
+swag.amISwag; // true;
+---
+```
+const zuchi = [
+  'paula', 'eunia', 'mateusz', 'robert',
+  'jarek', 'kamil', 'darek', 'pawel', 'piotrek',
+  'sebastian', 'rafalek'
+];
+
+zuchi.makeSuperZuchami = function () {
+  this.superZuchi = true;
+};
+
+zuchi.makeSuperZuchami();
+zuchi.superZuchi; // true
+---
+```
+const highFive = 5;
+highFive.toString(); // '5';
+highFive.k = 6;
+highFive.k === undefined // true;
+---
+`null`, `undefined`
+---
+<ImageWithLabel>
+  <img height="600" src="./static/alone.png"/>
+</ImageWithLabel>
+---
+
+
 
 
 ## Questions
