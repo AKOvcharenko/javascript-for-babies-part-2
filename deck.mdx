@@ -47,8 +47,8 @@ zuchi.superZuchi; // true
 ```
 const highFive = 5;
 highFive.toString(); // '5';
-highFive.k = 6;
-highFive.k === undefined // true;
+highFive.six = 6;
+highFive.six === undefined // true;
 ---
 `null`, `undefined`
 ---
@@ -57,9 +57,19 @@ highFive.k === undefined // true;
 </ImageWithLabel>
 ---
 
+<div>
+  <Components.h2>Numbers</Components.h2>
+  <Components.ol>
+    <Components.li>
+      All numbers are decimal.
+    </Components.li>
+  </Components.ol>
+</div>
 
-
-
+```js
+    1. 5.toString()  // Uncaught SyntaxError: Invalid or unexpected token
+       5..toString() // '5'
+---
 ## Questions
 
 ---
