@@ -58,7 +58,7 @@ highFive.six === undefined // true;
 ---
 export default Split
 
-<div>
+<div className="split">
   <Components.h2>Numbers</Components.h2>
   <Components.ol>
     <Components.li>
@@ -124,6 +124,32 @@ const customIsNaN = (instance) => instance !== instance;
 customIsNaN(NaN);                // true;
 customIsNaN('NaN');              // false;
 customIsNaN('i am not a NaN');   // false;
+---
+## strings
+```
+1. const delicacy = 'Mięsny Jeż';
+2. const = `chciałbym żeby na wigilie babcia przygotowala ${delicacy}`;
+3. String(false) || smth.toString() ;
+4.
+---
+## string's methods
+1. string combining
+```
+const bestMovie = 'Planeta' + ' ' + 'Singli'; // 'Planeta Singli'
+const genius = 'Tomasz'.concat(' Karolak');
+const compliment = 'Brawa '.repeat(3); // 'Brawa Brawa Brawa';
+```
+
+2. string spliting
+```const voldemortAsArray = 'He-who-must-not-be-named'.split('-');```
+
+3. string's substring
+```const voldemortAsArray = 'He-who-must-not-be-named'.split('-');```
+
+4. Changing the case
+``` const scream = 'Scream';
+    const loudScream = scream.toUpperCase() || scream.toLocaleUpperCase(); // 'SCREAM';
+    const whisper = scream.toLowerCase() || scream.toLocaleLowerCase(); // 'scream';
 
 ---
 
