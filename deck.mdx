@@ -60,7 +60,7 @@ export default Split
 
 <div>
   <Components.h2>Numbers</Components.h2>
-  <Components.ul>
+  <Components.ol>
     <Components.li>
       Possible values: decimal number, infinity, <Components.inlineCode>NaN</Components.inlineCode>.
     </Components.li>
@@ -78,27 +78,56 @@ export default Split
     </Components.li>
     <Components.li>
       <Components.inlineCode>parseInt</Components.inlineCode>, <Components.inlineCode>parseFloat</Components.inlineCode>
+      can be used for parsing strings-like a number
     </Components.li>
-  </Components.ul>
+  </Components.ol>
 </div>
 
 ```js
-11.0, Infinity, NaN
+1. 45.0, Infinity, NaN
 
-5.toString()  // SyntaxError
-5..toString() // '5'
+2. 5.toString()  // SyntaxError
+   5..toString() // '5'
 
-0.1 + 0.2 === 0.3 // false
-9999999999999999 === 10000000000000000 // true
+3. 0.1 + 0.2 === 0.3 // false
+   9999999999999999 === 10000000000000000 // true
 
-Number(false);
+4. Number(false);
 
-Math.sin(x);
+5. Math.sin(x);
 
-parseInt('12 कार्य'); // 12
+6. parseInt('12 कार्य'); // 12
 
 
 ---
+## `NaN`
+<ImageWithLabel>
+  <img height="600" src="./static/nan.jpg"/>
+</ImageWithLabel>
+---
+```
+NaN > 0     // false
+NaN < 0     // false
+NaN == 0    // false
+NaN === 0   // false
+NaN === NaN // false
+NaN !== NaN // true
+---
+## How to check is something NaN
+```
+isNaN(NaN);                // true;
+isNaN('NaN');              // true;
+isNaN('i am not a NaN');   // true;
+
+const customIsNaN = (instance) => instance !== instance;
+
+customIsNaN(NaN);                // true;
+customIsNaN('NaN');              // false;
+customIsNaN('i am not a NaN');   // false;
+
+---
+
+
 ## Questions
 
 ---
