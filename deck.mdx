@@ -60,9 +60,9 @@ export default Split
 
 <div>
   <Components.h2>Numbers</Components.h2>
-  <Components.ol>
+  <Components.ul>
     <Components.li>
-      Possible values: decimal number, infinity, `NaN`.
+      Possible values: decimal number, infinity, <Components.inlineCode>NaN</Components.inlineCode>.
     </Components.li>
     <Components.li>
       All numbers(except infinity and NaN) are decimal.
@@ -71,32 +71,31 @@ export default Split
       javascript does not have  precise calculations.
     </Components.li>
     <Components.li>
-      `Number` should be used for type coercion
+      <Components.inlineCode>Number</Components.inlineCode> should be used for type coercion
     </Components.li>
     <Components.li>
-      `Number` should be used for type coercion
+      Almost all math function available like a <Components.inlineCode>Math</Components.inlineCode>'s methods
     </Components.li>
     <Components.li>
-      `Number` should be used for type coercion
+      <Components.inlineCode>parseInt</Components.inlineCode>, <Components.inlineCode>parseFloat</Components.inlineCode>
     </Components.li>
-    <Components.li>
-      Almast all math function available like a  `Math`'s methods
-    </Components.li>
-  </Components.ol>
+  </Components.ul>
 </div>
 
 ```js
-1.
-   11.0, Infinity, NaN
+11.0, Infinity, NaN
 
-2. 5.toString()  // Uncaught SyntaxError: Invalid or unexpected token
-   5..toString() // '5'
+5.toString()  // SyntaxError
+5..toString() // '5'
 
-3. 0.1 + 0.2 === 0.3 // false
-   9999999999999999 === 10000000000000000 // true
+0.1 + 0.2 === 0.3 // false
+9999999999999999 === 10000000000000000 // true
 
-4. Number(false)
+Number(false);
 
+Math.sin(x);
+
+parseInt('12 कार्य'); // 12
 
 
 ---
