@@ -141,18 +141,53 @@ const compliment = 'Brawa '.repeat(3); // 'Brawa Brawa Brawa';
 ```
 
 2. string spliting
-```const voldemortAsArray = 'He-who-must-not-be-named'.split('-');```
+```
+const voldemortAsArray = 'He-who-must-not-be-named'.split('-');
+```
+---
+## string's methods
 
 3. string's substring
-```const voldemortAsArray = 'He-who-must-not-be-named'.split('-');```
+```
+const slicePokerFace = 'Andrzeju nie denerwuj się ( ͡° ͜ʖ ͡°)'.slice(-11);
+const substingPokerFace = 'Andrzeju nie denerwuj się ( ͡° ͜ʖ ͡°)'.substring(26, 60);
+```
 
 4. Changing the case
 ``` const scream = 'Scream';
     const loudScream = scream.toUpperCase() || scream.toLocaleUpperCase(); // 'SCREAM';
     const whisper = scream.toLowerCase() || scream.toLocaleLowerCase(); // 'scream';
-
 ---
+## string's methods
 
+5. accessing characters
+```
+let dollar = '$100'.charAt(0);
+dollar = '$100'[0];
+```
+
+6. string trimming
+```
+trim, trimRight, trimLeft
+```
+---
+## string's methods
+
+7. string testing
+```
+const quote = 'This is not a hat. It is an elephant inside of a snake';
+
+quote.endsWith('snake');   // true;
+quote.startsWith('snake'); // false;
+quote.startsWith('snake'); // true;
+quote.indexOf('is');       // 2;
+quote.lastIndexOf('is');   // 22;
+quote.search('is');        // 2;
+quote.match(/is/ig);       // ["is", "is", "is"];
+
+
+```
+---
 
 ## Questions
 
