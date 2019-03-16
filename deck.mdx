@@ -12,7 +12,7 @@ export { default as theme } from './theme'
 
 
 <ImageWithLabel>
-  <img height="600" src="./static/at-finish.jpg"/>
+  <img height="400" src="./static/at-finish.jpg"/>
 </ImageWithLabel>
 Author: Artem Ovcharenko
 
@@ -190,10 +190,10 @@ quote.match(/is/ig);       // ["is", "is", "is"];
 ## Array
 
 ```
-const filmsILiked = ['Listy do M.', 'Listy do M. 2', 'Listy do M. 3'];
-const serialsILiked = new Array('07 zgłoś się');
-const serialsILiked = Array.of(1, 2, 4, 3, 6, 5);
-Array.isArray(serialsILiked); // true;
+const filmsILike = ['Listy do M.', 'Listy do M. 2', 'Listy do M. 3'];
+const serialsILike = new Array('07 zgłoś się');
+const serialsILike = Array.of(1);
+Array.isArray(serialsILike); // true;
 Array.isArray('Sławomir Borewicz '); // false;
 [] !== [] // true
 ```
@@ -201,21 +201,21 @@ Array.isArray('Sławomir Borewicz '); // false;
 ## Array
 
 ```
-const filmsILiked = ['Planeta singli', 'Planeta singli 2', 'Planeta singli 3'];
+const filmsILike = ['Planeta singli', 'Planeta singli 2', 'Planeta singli 3'];
 
-filmsILiked.hackedList = 'The Shawshank Redemption';
+filmsILike.hackedList = 'The Shawshank Redemption';
 
 const buyATicket = (title) => {
   console.log(title);
 }
 
-for (let i = 0; i < filmsILiked.length; i += 1) { buyATicket(filmsILiked[i]); }
+for (let i = 0; i < filmsILike.length; i += 1) { buyATicket(filmsILike[i]); }
 // 'Planeta singli', 'Planeta singli 2', 'Planeta singli 3'
 
-for (let key in filmsILiked) { buyATicket(filmsILiked[key]); }
+for (let key in filmsILike) { buyATicket(filmsILike[key]); }
 // 'Planeta singli', 'Planeta singli 2', 'Planeta singli 3', 'The Shawshank Redemption'
 
-filmsILiked.forEach(buyATicket);
+filmsILike.forEach(buyATicket);
 // 'Planeta singli', 'Planeta singli 2', 'Planeta singli 3'
 ```
 ---
@@ -223,17 +223,10 @@ filmsILiked.forEach(buyATicket);
 ---
 ## Stack
 <ImageWithLabel>
-  <img height="400" src="./static/stack.jpg"/>
-</ImageWithLabel>
-```
-tasks.push(newTask) // added one more task to stack;
-task.pop(nextTask)  // task array has modified, we took next task for executing
----
-## Stack
-<ImageWithLabel>
   <img height="400" src="./static/stack.png"/>
 </ImageWithLabel>
-```
+
+```js
 //shouldn't be done like
 tasks.unshift(newTask) // added one more task to stack;
 task.shift(nextTask)  // task array has modified, we took next task for executing
@@ -241,12 +234,15 @@ task.shift(nextTask)  // task array has modified, we took next task for executin
 //should be done like
 tasks.push(newTask) // added one more task to stack;
 task.pop(nextTask)  // task array has modified, we took next task for executing
+```
 ---
 ## queue
+
 <ImageWithLabel>
   <img height="400" src="./static/queue.png"/>
 </ImageWithLabel>
-```
+
+```js
 tasks.push(newTask) // added one more task to stack;
 task.shift(nextTask)  // task array has modified, we took next task for executing
 ---
@@ -269,15 +265,15 @@ const divsAsArray = Array.from(divs);
 const poserAsArray = Array.from(poser); // same result as poser.split('');
 ---
 ```
-const filmsILiked = ['Listy do M.', 'Listy do M. 2', 'Listy do M. 3'];
-const serialsILiked = new Array('07 zgłoś się');
+const filmsILike = ['Listy do M.', 'Listy do M. 2', 'Listy do M. 3'];
+const serialsILike = new Array('07 zgłoś się');
 
 //shouldn't be done like
-for (film in filmsILiked) { serialsILiked.unshift(filmsILiked[film]) };
+for (film in filmsILike) { serialsILike.unshift(filmsILike[film]) };
 
 //should be done like
-filmsILiked.concat(serialsILiked);
-[...filmsILiked, ...serialsILiked];
+filmsILike.concat(serialsILike);
+[...filmsILike, ...serialsILike];
 ---
 ```
 const films = ['Listy do M.', 'Listy do M. 2', 'Planeta singli', 'Planeta singli 2', 'Planeta singli 3'];
@@ -306,6 +302,7 @@ temp.forEach((sal) => {console.log(sal)});
 //should be done like
 incomes.revert().forEach((sal) => {console.log(sal)});
 ---
+```
 const incomes = [novSalary, 0, janSalary, febSalary];
 const checker = (sal) => sal;
 
@@ -318,6 +315,7 @@ incomes.forEach((sal) => {
 //should be done like
 incomes.filter(checker);
 ---
+```
 const incomes = [10, 5, 3, 12];
 const sorter = (a, b) => a > b ? 1 : -1;
 
